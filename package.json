@@ -1,0 +1,29 @@
+{
+  "name": "eslint-init",
+  "version": "1.0.0",
+  "description": "集成eslint的cli脚本",
+  "bin": "./bin/index.js",
+  "author": "zhaopengcheng <710411486@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "babel-eslint": "^10.0.2",
+    "chalk": "^2.4.2",
+    "commander": "^3.0.0",
+    "cross-spawn": "^6.0.5",
+    "dotenv": "^8.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-flowtype": "2.50.1",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-react-hooks": "^1.5.0",
+    "fs-extra": "^8.1.0",
+    "husky": "^3.0.3",
+    "lint-staged": "^8.1.5",
+    "opn": "^6.0.0",
+    "prettier": "1.18.2"
+  }
+}
