@@ -1,6 +1,7 @@
 const paths = require('./paths');
 const prettier = require('prettier');
 const fs = require('fs-extra');
+const pkgName = require('../../package.json').name
 
 module.exports = function updatePkg() {
 	const buffer = fs.readFileSync(paths.packageJsonPath);
@@ -11,15 +12,19 @@ module.exports = function updatePkg() {
 			'pre-commit': 'lint-staged'
 		}
 	};
+	if(!pkg.scripts) {
+		pkg.scripts = {}
+	}
+	pkg.scripts[pkgName] = pkgName
 	pkg['lint-staged'] = {
 		linters: {
 			'src/**/*.{json,css,less,scss,sass}': ['prettier --write', 'git add'],
 			'src/**/*.{js,jsx,ts,tsx,vue}': [
 				'prettier --write',
-				'eslint-init check',
+				`${pkgName} check`,
 				'prettier --write',
 				'git add',
-				'eslint-init report'
+				`${pkgName} report`
 			]
 		},
 		ignore: ['*.min.js']
