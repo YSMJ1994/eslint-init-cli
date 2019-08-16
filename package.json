@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "集成eslint的cli脚本",
   "bin": "./bin/index.js",
-  "author": "zhaopengcheng <710411486@qq.com>",
+  "author": "soberz",
   "license": "MIT",
+  "homepage": "https://github.com/YSMJ1994/eslint-init",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YSMJ1994/eslint-init"
+  },
+  "keywords": ["cli", "eslint", "eslint-init", "prettier", "cli-util"],
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
