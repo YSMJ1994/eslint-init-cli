@@ -1,5 +1,5 @@
 {
-  "name": "eslint-init",
+  "name": "eslint-init-cli",
   "version": "1.0.0",
   "description": "集成eslint的cli脚本",
   "bin": "./bin/index.js",

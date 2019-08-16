@@ -17,7 +17,7 @@ program
 	.option('--typescript', 'init with typescript')
 	.option('--react', 'init with react')
 	.option('--vue', 'init with vue')
-	.description('eslint-init init your project')
+	.description('init your project by eslint and prettier')
 	.action(onInit);
 
 program.command('check [files...]').action(onCheck);
@@ -43,7 +43,7 @@ function sleepToExcute(cb, delay) {
 async function onInit() {
 	const { typescript = false, react = false, vue = false } = program.opts();
 
-	console.log(chalk.cyan('eslint-init 初始化中...'));
+	console.log(chalk.cyan('eslint-init-cli 初始化中...'));
 	const { gendEslintrc, gendIgnore } = require('../src/utils/gend-eslintrc');
 
 	console.log(chalk.blue('正在写入eslint配置文件...'));
@@ -66,7 +66,7 @@ async function onInit() {
 		require('../src/utils/update-package')();
 		console.log(chalk.blue('package.json写入完毕！'));
 	}, 500);
-	console.log(chalk.cyan('初始化成功，Happy Coding！'));
+	console.log(chalk.cyan('eslint-init-cli 初始化成功，Happy Coding！'));
 }
 
 function onCheck(files) {
