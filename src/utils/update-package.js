@@ -12,10 +12,6 @@ module.exports = function updatePkg() {
 			'pre-commit': 'lint-staged'
 		}
 	};
-	if(!pkg.scripts) {
-		pkg.scripts = {}
-	}
-	pkg.scripts[pkgName] = pkgName
 	pkg['lint-staged'] = {
 		linters: {
 			'src/**/*.{json,css,less,scss,sass}': ['prettier --write', 'git add'],
