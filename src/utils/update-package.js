@@ -1,7 +1,7 @@
 const paths = require('./paths');
 const prettier = require('prettier');
 const fs = require('fs-extra');
-const pkgName = require('../../package.json').name
+const { cliName } = paths;
 
 module.exports = function updatePkg() {
 	const buffer = fs.readFileSync(paths.packageJsonPath);
@@ -17,10 +17,10 @@ module.exports = function updatePkg() {
 			'src/**/*.{json,css,less,scss,sass}': ['prettier --write', 'git add'],
 			'src/**/*.{js,jsx,ts,tsx,vue}': [
 				'prettier --write',
-				`${pkgName} check`,
+				`${cliName} check`,
 				'prettier --write',
 				'git add',
-				`${pkgName} report`
+				`${cliName} report`
 			]
 		},
 		ignore: ['*.min.js']

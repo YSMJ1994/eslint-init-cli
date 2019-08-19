@@ -1,8 +1,10 @@
 {
-  "name": "eslint-init-cli",
+  "name": "@jinyiao/eslint-init-cli",
   "version": "1.0.0",
   "description": "集成eslint的cli脚本",
-  "bin": "./bin/index.js",
+  "bin": {
+    "eslint-init-cli": "./bin/index.js"
+  },
   "author": "zhaopengcheng",
   "license": "MIT",
   "homepage": "https://github.com/YSMJ1994/eslint-init",
@@ -13,7 +15,7 @@
   "keywords": [
     "cli",
     "eslint",
-    "eslint-init",
+    "eslint-init-cli",
     "prettier",
     "cli-util"
   ],
