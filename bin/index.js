@@ -26,9 +26,8 @@ program.command('report').action(onReport);
 program.parse(process.argv);
 
 if (!program.args.length) {
-	// program.help();
+	program.help();
 	// program.CommandOptions
-	onInit();
 }
 
 function sleepToExcute(cb, delay) {
