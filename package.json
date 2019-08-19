@@ -1,6 +1,6 @@
 {
   "name": "eslint-init-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "集成eslint的cli脚本",
   "bin": "./bin/index.js",
   "author": "soberz",
