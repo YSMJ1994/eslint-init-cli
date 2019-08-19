@@ -1,9 +1,9 @@
 {
   "name": "eslint-init-cli",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "集成eslint的cli脚本",
   "bin": "./bin/index.js",
-  "author": "soberz",
+  "author": "zhaopengcheng",
   "license": "MIT",
   "homepage": "https://github.com/YSMJ1994/eslint-init",
   "repository": {
