@@ -6,6 +6,7 @@
 ```bash
     yarn add @jinyiao/eslint-init-cli
 ```
+
 - npm
 ```bash
     npm install @jinyiao/eslint-init-cli
@@ -21,7 +22,7 @@
     # 集成react eslint提交检查
     yarn run eslint-init-cli init --react
     # 集成vue eslint提交检查(未完成)
-    yarn run eslint-init-cli init --typescript --vue
+    yarn run eslint-init-cli init --vue
     # 集成typescript eslint提交检查
     yarn run eslint-init-cli init --typescript
     # 集成typescript & react eslint提交检查
