@@ -39,6 +39,12 @@ function sleepToExcute(cb, delay) {
 	});
 }
 
+function sleep(duration = 0) {
+	return new Promise(resolve => {
+		setTimeout(resolve, duration);
+	});
+}
+
 async function onInit() {
 	const { typescript = false, react = false, vue = false } = program.opts();
 
@@ -46,25 +52,29 @@ async function onInit() {
 	const { gendEslintrc, gendIgnore } = require('../src/utils/gend-eslintrc');
 
 	console.log(chalk.blue('正在写入eslint配置文件...'));
-	await sleepToExcute(() => {
-		gendIgnore();
-		console.log(chalk.green('.eslintignore配置完毕！'));
-		gendEslintrc({ vue, react, ts: typescript });
-		console.log(chalk.green('.eslintrc.js配置完毕！'));
-	}, 500);
+	await sleep(500);
+	gendIgnore();
+	console.log(chalk.green('.eslintignore配置完毕！'));
+	gendEslintrc({ vue, react, ts: typescript });
+	console.log(chalk.green('.eslintrc.js配置完毕！'));
 	console.log(chalk.green('eslint配置完毕！'));
 
 	console.log(chalk.blue('正在写入prettier配置文件...'));
-	await sleepToExcute(() => {
-		require('../src/utils/gend-prettierrc').gend();
-		console.log(chalk.green('.prettierrc.js配置完毕！'));
-	}, 500);
+	await sleep(500);
+	require('../src/utils/gend-prettierrc').gend();
+	console.log(chalk.green('.prettierrc.js配置完毕！'));
 	console.log(chalk.green('prettier配置完毕！'));
+
 	console.log(chalk.blue('正在写入package.json...'));
-	await sleepToExcute(() => {
-		require('../src/utils/update-package')();
-		console.log(chalk.blue('package.json写入完毕！'));
-	}, 500);
+	await sleep(500);
+	require('../src/utils/update-package')();
+	console.log(chalk.blue('package.json写入完毕！'));
+
+	console.log(chalk.blue('正在写入eslint说明文档...'));
+	await sleep(500);
+	require('../src/utils/copyEslintReadme').gend();
+	console.log(chalk.green('写入eslint说明文档成功！'));
+
 	console.log(chalk.cyan('eslint-init-cli 初始化成功，Happy Coding！'));
 }
 

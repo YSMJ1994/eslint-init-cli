@@ -28,7 +28,7 @@ module.exports = {
 		'no-duplicate-case': 'error', // 禁止出现重复的case表达式
 		'no-empty-character-class': 'error', // 禁止在正则表达式中使用空字符集
 		'no-empty-pattern': 'warn', // 空解构模式警告提示
-		'no-eval': 'error', // 使用eval警告提示
+		'no-eval': 'warn', // 使用eval警告提示
 		'no-ex-assign': 'error', // 禁止对catch的异常参数赋值
 		'no-extend-native': 'error', // 禁止扩展原生对象
 		'no-extra-bind': 'warn', // 不必要的bind调用警告提示

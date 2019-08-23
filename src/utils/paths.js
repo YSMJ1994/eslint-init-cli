@@ -19,5 +19,7 @@ module.exports = {
 	prettierrcTempPath: path.resolve(__dirname, '../../.prettierrc.js'),
 	eslintrcPath: resolveApp('.eslintrc.js'),
 	eslintignorePath: resolveApp('.eslintignore'),
-	logBasePath: resolveApp(config.log)
+	logBasePath: resolveApp(config.log),
+	eslintReadmeTempPath: path.resolve(__dirname, '../../eslint规则说明.md'),
+	eslintReadmePath: resolveApp('eslint规则说明.md'),
 };
