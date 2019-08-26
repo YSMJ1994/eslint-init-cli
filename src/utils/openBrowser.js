@@ -10,7 +10,7 @@
 var chalk = require('chalk');
 var execSync = require('child_process').execSync;
 var spawn = require('cross-spawn');
-var opn = require('opn');
+var opn = require('open');
 
 // https://github.com/sindresorhus/opn#app
 var OSX_CHROME = 'google chrome';

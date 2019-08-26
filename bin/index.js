@@ -68,7 +68,7 @@ async function onInit() {
 	console.log(chalk.blue('正在写入package.json...'));
 	await sleep(500);
 	require('../src/utils/update-package')();
-	console.log(chalk.blue('package.json写入完毕！'));
+	console.log(chalk.green('package.json写入完毕！'));
 
 	console.log(chalk.blue('正在写入eslint说明文档...'));
 	await sleep(500);
