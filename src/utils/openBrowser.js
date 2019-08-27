@@ -7,29 +7,10 @@
 
 'use strict';
 
-let chalk = require('chalk');
-let execSync = require('child_process').execSync;
-let spawn = require('cross-spawn');
-let opn = require('open');
+const execSync = require('child_process').execSync;
+const open = require('open');
 
 let OSX_CHROME = 'google chrome';
-
-function executeNodeScript(scriptPath, url) {
-	const extraArgs = process.argv.slice(2);
-	const child = spawn('node', [scriptPath, ...extraArgs, url], {
-		stdio: 'inherit'
-	});
-	child.on('close', code => {
-		if (code !== 0) {
-			console.log();
-			console.log(chalk.red('The script specified as BROWSER environment variable failed.'));
-			console.log(chalk.cyan(scriptPath) + ' exited with code ' + code + '.');
-			console.log();
-			return;
-		}
-	});
-	return true;
-}
 
 function openBrowser(url) {
 	let browser = process.env.BROWSER;
@@ -48,17 +29,16 @@ function openBrowser(url) {
 			// Ignore errors.
 		}
 	}
-	if (process.platform === 'darwin' && browser === 'open') {
-		browser = undefined;
-	}
+
 	try {
-		let options = { app: browser, wait: false };
-		opn(url, options).catch(err => {
-			console.log('open reject error ', err);
+		let options = { wait: false };
+		// console.log('execute open')
+		open(url, options).catch(err => {
+			// console.log('open reject error ', err);
 		}); // Prevent `unhandledRejection` error.
 		return true;
 	} catch (err) {
-		console.log('open error', err);
+		// console.log('open error', err);
 		return false;
 	}
 }
