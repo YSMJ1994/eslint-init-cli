@@ -20,7 +20,7 @@ module.exports = {
 	rules: {
 		// eslint-plugin-import rules
 		// import 语句置顶
-		'import/first': 'error',
+		'import/first': 'warn',
 		// 禁止使用amd模块化规范
 		'import/no-amd': 'error',
 		// 禁止使用webpack loader语法导入

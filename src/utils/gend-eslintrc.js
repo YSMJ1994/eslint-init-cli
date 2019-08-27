@@ -20,7 +20,7 @@ module.exports = {
 			if (ts) {
 				extendsArr.push(`${pluginName}/config/typescript-react.js`);
 			} else {
-				extendsArr.push(`${pluginName}/config/react`);
+				extendsArr.push(`${pluginName}/config/react.js`);
 			}
 		}
 		if (vue) {

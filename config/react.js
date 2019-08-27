@@ -6,6 +6,21 @@ module.exports  = {
 			version: 'detect',
 		},
 	},
+	parserOptions: {
+		ecmaVersion: 2018,
+		sourceType: 'module',
+		ecmaFeatures: {
+			globalReturn: true,
+			impliedStrict: false
+		}
+	},
+	env: {
+		browser: true,
+		commonjs: true,
+		es6: true,
+		jest: true,
+		node: true
+	},
 	rules: {
 		// eslint-plugin-react rules
 		'react/forbid-foreign-prop-types': ['warn', { allowInPropTypes: true }],
@@ -20,8 +35,10 @@ module.exports  = {
 				ignore: [],
 			},
 		],
+		'react/jsx-indent-props': 'off',
 		'react/jsx-uses-react': 'warn',
 		'react/jsx-uses-vars': 'warn',
+		'react/sort-comp': 'off',
 		'react/no-danger-with-children': 'warn',
 		// Disabled because of undesirable warnings
 		// See https://github.com/facebook/create-react-app/issues/5204 for

@@ -75,6 +75,7 @@ module.exports = {
 		'no-template-curly-in-string': 'warn', // 常规字符串中出现模板字符串占位符给出警告
 		'no-this-before-super': 'error', // 禁止在对象构造函数中super之前调用this
 		'no-throw-literal': 'error', // 禁止抛出非Error对象
-		'no-undef': 'error' // 禁用未声明的变量
+		'no-undef': 'error', // 禁用未声明的变量
+		'key-spacing': 'off'
 	}
 };
