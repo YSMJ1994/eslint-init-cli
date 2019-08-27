@@ -30,6 +30,7 @@ module.exports = function checking(files) {
 	console.log(commandFormatterMsg);
 	// 若有警告或错误信息，则打开浏览器展示
 	if (report.errorCount || report.warningCount) {
+		console.log('reportPath', reportPath)
 		openBrowser(`file://${reportPath}`);
 	}
 	setTimeout(() => {
