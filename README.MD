@@ -4,12 +4,12 @@
 
 - yarn
 ```bash
-    yarn add @jinyiao/eslint-init-cli
+    yarn add eslint-init-cli
 ```
 
 - npm
 ```bash
-    npm install @jinyiao/eslint-init-cli
+    npm install eslint-init-cli
 ```
 
 # 使用
