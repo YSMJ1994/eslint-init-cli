@@ -1,6 +1,6 @@
 {
-  "name": "@jinyiao/eslint-init-cli",
-  "version": "1.0.4",
+  "name": "eslint-init-cli",
+  "version": "1.0.3",
   "description": "集成eslint的cli脚本",
   "bin": {
     "eslint-init-cli": "./bin/index.js"
