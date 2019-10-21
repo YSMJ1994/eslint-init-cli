@@ -5,7 +5,7 @@
   "bin": {
     "eslint-init-cli": "./bin/index.js"
   },
-  "author": "zhaopengcheng",
+  "author": "soberz <710411486@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/YSMJ1994/eslint-init",
   "repository": {
