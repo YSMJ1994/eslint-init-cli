@@ -1,6 +1,6 @@
 {
   "name": "eslint-init-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "集成eslint的cli脚本",
   "bin": {
     "eslint-init-cli": "./bin/index.js"
@@ -37,6 +37,6 @@
     "husky": "^3.0.3",
     "lint-staged": "^8.1.5",
     "open": "^6.4.0",
-    "prettier": "1.18.2"
+    "prettier": "^2.0.5"
   }
 }

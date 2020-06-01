@@ -15,7 +15,7 @@ module.exports = {
 	trailingComma: 'none',
 	// 对象大括号两端的空格
 	bracketSpacing: true,
-	// jax元素标签头部的 > 放在和属性的同一行(不适用于自闭合标签)
+	// jsx元素标签头部的 > 放在和属性的同一行(不适用于自闭合标签)
 	jsxBracketSameLine: false,
 	// 箭头函数参数的括号 (avoid 尽可能省略 || always 总是显示)
 	arrowParens: 'avoid',
@@ -45,6 +45,12 @@ module.exports = {
 				parser: 'json',
 				tabWidth: 2,
 				useTabs: false
+			}
+		},
+		{
+			files: ['*.ts'],
+			options: {
+				parser: 'babel-ts'
 			}
 		}
 	]
